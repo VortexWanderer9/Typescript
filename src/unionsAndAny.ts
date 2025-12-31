@@ -78,4 +78,41 @@ function message(text: 'sent' | 'delivered' | 'seen' | 'pending'){
         return `New User is Created ${user.name}`
     }
  }
- 
+
+
+ type fetch = {type: 'request'; status: '200'}
+  type get = {type: 'user'; status: '200'}
+   type post = {type: 'Admin'; status: '200'}
+
+   type newAdmin = fetch | get | post
+
+   function makeNewAdmin(user: newAdmin){
+    switch(user.type){
+        case "user":
+            return 'user become Admin'
+            break;
+            case 'Admin':
+                return "this user is already admin"
+                break;
+            case 'request':
+                return "Get Request"
+                break;
+            default :
+                return "Request Invalid"
+                break;
+    }
+   }
+
+   function getAdmin(user: post | get){
+    if('Admin' in user){
+        return "admin found" + user.Admin
+    }
+   }
+
+
+type Player = {
+    type: 'team',
+    players: string
+    team: string,
+    numberOfTeam: number,
+}
