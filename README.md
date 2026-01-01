@@ -1,0 +1,2 @@
+## Typescript Basic syntax Examples
+This repository contains basic syntax examples of TypeScript, a strongly typed programming language that builds on JavaScript. The examples cover various fundamental concepts and features of TypeScript to help beginners get started with the language.
